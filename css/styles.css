@@ -165,6 +165,8 @@ color: var(--pressed-state);
     letter-spacing: 0.04em;
     padding: 16px 32px;
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 
 
 }
