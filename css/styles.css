@@ -71,8 +71,6 @@ overflow: hidden;
 
 .header {
     border-bottom: 1px solid var(--accent);
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .header-container {
@@ -113,7 +111,10 @@ overflow: hidden;
 ;
 }
 
-.header-item {}
+.header-item {
+padding-top: 24px;
+padding-bottom: 24px;
+}
 
 .header-link {
     font-weight: 500;
@@ -172,7 +173,7 @@ color: var(--pressed-state);
     width: 496px;
     margin: auto;
     margin-bottom: 48px;
-
+    max-width: 496px;
 }
 
 .hero-btn {
@@ -187,8 +188,7 @@ color: var(--pressed-state);
     display: block;
     margin: 0 auto;
     border: none;
-
-
+    min-width: 169px;
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -216,7 +216,7 @@ color: var(--pressed-state);
 .benefits-list {
     display: flex;
     justify-content: space-between;
-
+    gap: 24px;
 }
 
 .benefits-list-item {
@@ -241,7 +241,9 @@ color: var(--pressed-state);
   | What we do styles
   |============================
 */
-.section {}
+.section.what-we-do {
+padding-bottom: 120px;
+}
 
 .what-we-do {}
 
@@ -254,13 +256,12 @@ color: var(--pressed-state);
     color: var(--dark);
     margin-bottom: 72px;
 }
-.what-we-do-container {
-padding-bottom: 120px;
-}
+.what-we-do-container {}
 
 .what-we-do-list {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .what-we-do-list-item {}
@@ -270,16 +271,15 @@ padding-bottom: 120px;
   | Our team styles
   |============================
 */
-.section {}
+.section.team {
+padding-top: 120px;
+padding-bottom: 120px;
+}
 
 .team {
 background-color: var(--light);
 }
 
-.our-team-container {
-padding-top: 120px;
-padding-bottom: 120px;
-}
 
 .team-title {
     font-weight: 500;
@@ -294,11 +294,13 @@ padding-bottom: 120px;
 
 .team-list {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
 }
 
 .team-list-item {
     background-color: var(--white-background);
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-title {
@@ -307,18 +309,18 @@ padding-bottom: 120px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-    display: flex;
-    justify-content: center;
-    padding-top: 32px;
-    padding-bottom: 8px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-text {
     font-size: 16px;
     letter-spacing: 0.02em;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 32px;
+    text-align: center;
+}
+
+.team-member {
+    padding: 32px 16px;
 }
 
 /**
@@ -327,12 +329,10 @@ padding-bottom: 120px;
   |============================
 */
 
-.portfolio-container {
+.portfolio.section {
     padding-top: 96px;
     padding-bottom: 120px;
 }
-
-.portfolio {}
 
 .section {}
 
@@ -342,6 +342,8 @@ padding-bottom: 120px;
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
 }
 
 .portfolio-btn {
@@ -356,8 +358,6 @@ padding-bottom: 120px;
     letter-spacing: 0.04em;
     border-radius: 4px;
     padding: 12px 24px;
-    margin-right: 24px;
-    margin-bottom: 72px;
 }
 
 .portfolio-btn.marketing {
@@ -367,11 +367,13 @@ padding-bottom: 120px;
 .portfolio-btn:hover {
         background-color: var(--pressed-state);
         color: var(--white-background);
+        border: 1px solid transparent;
     }
 
 .portfolio-btn:focus {
     background-color: var(--pressed-state);
     color: var(--white-background);
+    border: 1px solid transparent;
 }
 
 
@@ -379,7 +381,9 @@ padding-bottom: 120px;
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
+    
 }
 
 .portfolio-list-item {}
@@ -390,6 +394,7 @@ padding-bottom: 120px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
+    margin-bottom: 8px;
     }
 
 .portfolio-text {
@@ -412,6 +417,7 @@ color: var(--text);
 */
 .footer {
     background-color: var(--dark);
+    padding: 100px 0;
 }
 
 .footer-logo {
@@ -422,19 +428,14 @@ color: var(--text);
         font-size: 18px;
         line-height: 1.17;
         letter-spacing: 0.03em;
-        padding-bottom: 16px;
-        display: flex;
+        margin-bottom: 16px;
+        display: inline-block;
     }
     
     .logo-foot {
         color: var(--light);
     }
     
-    .footer-container {
-padding-top: 100px;
-padding-bottom: 100px;
-    }
-
 .footer-text {
     color: var(--light);
     letter-spacing: 0.02em;
