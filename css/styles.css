@@ -121,6 +121,7 @@ overflow: hidden;
     letter-spacing: 0.02em;
     padding: 24px 0;
 }
+
 .header-link:hover {
 color: var(--pressed-state);
 }
