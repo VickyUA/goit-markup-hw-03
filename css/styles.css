@@ -111,10 +111,7 @@ overflow: hidden;
 ;
 }
 
-.header-item {
-padding-top: 24px;
-padding-bottom: 24px;
-}
+.header-item {}
 
 .header-link {
     font-weight: 500;
@@ -122,6 +119,8 @@ padding-bottom: 24px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .header-link:hover {
 color: var(--pressed-state);
@@ -360,9 +359,6 @@ background-color: var(--light);
     padding: 12px 24px;
 }
 
-.portfolio-btn.marketing {
-    margin-right: 0;
-}
 
 .portfolio-btn:hover {
         background-color: var(--pressed-state);
